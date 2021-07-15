@@ -37,12 +37,12 @@ export const getRequiredLazySlides = spec => {
 // startIndex that needs to be present
 export const lazyStartIndex = spec => {
   let startIndex = spec.currentSlide - lazySlidesOnLeft(spec);
-  if (spec.lazyLoad === "anticipated") startIndex -= 1;
+  if (spec.lazyLoad === "anticipated") startIndex += 1;
   return startIndex;
 };
 export const lazyEndIndex = spec => {
   let endIndex = spec.currentSlide + lazySlidesOnRight(spec);
-  if (spec.lazyLoad === "anticipated") endIndex += 1;
+  if (spec.lazyLoad === "anticipated") endIndex -= 1;
   return endIndex;
 };
 export const lazySlidesOnLeft = spec =>

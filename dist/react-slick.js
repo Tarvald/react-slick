@@ -3281,12 +3281,12 @@
 
         var lazyStartIndex = function lazyStartIndex(spec) {
           var startIndex = spec.currentSlide - lazySlidesOnLeft(spec);
-          if (spec.lazyLoad === "anticipated") startIndex -= 1;
+          if (spec.lazyLoad === "anticipated") startIndex += 1;
           return startIndex;
         };
         var lazyEndIndex = function lazyEndIndex(spec) {
           var endIndex = spec.currentSlide + lazySlidesOnRight(spec);
-          if (spec.lazyLoad === "anticipated") endIndex += 1;
+          if (spec.lazyLoad === "anticipated") endIndex -= 1;
           return endIndex;
         };
         var lazySlidesOnLeft = function lazySlidesOnLeft(spec) {
