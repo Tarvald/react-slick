@@ -111,7 +111,7 @@ const renderSlides = spec => {
     if (
       !spec.lazyLoad ||
       (spec.lazyLoad && spec.lazyLoadedList.indexOf(index) >= 0) ||
-      shouldOmitLazy(index)
+      shouldOmitLazy(spec.omitLazyForSlides, index)
     ) {
       child = elem;
     } else {
